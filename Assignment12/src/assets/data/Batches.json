@@ -1,0 +1,5 @@
+[
+    {"name":"PPA", "fees":1000},
+    {"name":"angular", "fees":2000},
+    {"name":"java", "fees":3000}
+]

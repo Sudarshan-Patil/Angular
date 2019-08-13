@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StringService } from '../string.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-child2',
@@ -8,11 +9,12 @@ import { StringService } from '../string.service';
 })
 export class Child2Component implements OnInit {
 
-  public caps;
+  public caps; httpMsg;
 
   constructor(private obj:StringService) { }
 
   ngOnInit() {
+    this.httpMsg = this.obj.getDetails();
   }
 
   public calculateCaps(str)
